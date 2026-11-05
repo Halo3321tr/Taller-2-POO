@@ -1,0 +1,185 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="3">
+  <diagram id="page-1" name="Modelo de dominio">
+    <mxGraphModel dx="2211" dy="1289" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2300" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Plato&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- nombre: String&lt;br&gt;- precio: double&lt;br&gt;- linea: LineaCocina&lt;br&gt;- categoria: Categoria&lt;br&gt;- stock: int&lt;hr style=&quot;margin:4px 0&quot;&gt;+ describir(): String&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getPrecio(): double&lt;br&gt;+ getLinea(): LineaCocina&lt;br&gt;+ getCategoria(): Categoria&lt;br&gt;+ getStock(): int" vertex="1">
+          <mxGeometry height="299" width="290" x="430" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Entrada&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ describir(): String" vertex="1">
+          <mxGeometry height="128" width="290" x="50" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="1_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;PlatoFuerte&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ describir(): String" vertex="1">
+          <mxGeometry height="128" width="290" x="280" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="1_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Bebida&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ describir(): String" vertex="1">
+          <mxGeometry height="128" width="290" x="630" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="1_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Postre&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ describir(): String" vertex="1">
+          <mxGeometry height="128" width="290" x="920" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="1_6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Pedido&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- id: int&lt;br&gt;- creadoEn: LocalDateTime&lt;br&gt;- listoEn: LocalDateTime&lt;br&gt;- estado: EstadoPedido&lt;br&gt;- items: Map&amp;lt;Plato, Integer&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ costoAdicional(): double&lt;br&gt;+ getTipo(): String&lt;br&gt;+ fijarCantidad(plato, cantidad): void&lt;br&gt;+ cantidadDe(plato): int&lt;br&gt;+ getItems(): Map&amp;lt;Plato, Integer&amp;gt;&lt;br&gt;+ subtotal(): double" vertex="1">
+          <mxGeometry height="299" width="290" x="1400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1_7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;PedidoMesa&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- numeroMesa: int&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getNumeroMesa(): int&lt;br&gt;+ costoAdicional(): double&lt;br&gt;+ getTipo(): String" vertex="1">
+          <mxGeometry height="166" width="290" x="980" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="1_8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;PedidoDomicilio&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- zona: Zona&lt;br&gt;- direccion: String&lt;br&gt;- calculador: CalculadorTarifa&lt;br&gt;- repartidor: Repartidor&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getZona(): Zona&lt;br&gt;+ getDireccion(): String&lt;br&gt;+ getRepartidor(): Repartidor&lt;br&gt;+ setRepartidor(asignado): void&lt;br&gt;+ costoAdicional(): double&lt;br&gt;+ getTipo(): String" vertex="1">
+          <mxGeometry height="280" width="290" x="1690" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="1_9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Repartidor&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- nombre: String&lt;br&gt;- disponible: boolean&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getNombre(): String&lt;br&gt;+ isDisponible(): boolean&lt;br&gt;+ setDisponible(valor): void&lt;br&gt;+ toString(): String" vertex="1">
+          <mxGeometry height="204" width="290" x="1920" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_0" edge="1" parent="1" source="1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_1" edge="1" parent="1" source="1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_2" edge="1" parent="1" source="1_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_3" edge="1" parent="1" source="1_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_4" edge="1" parent="1" source="1_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_5" edge="1" parent="1" source="1_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" target="1_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_6" edge="1" parent="1" source="1_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e0_7" edge="1" parent="1" source="1_8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="1_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-2" name="Patrones de diseño">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2300" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2_1" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;FabricaCocina&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="370" y="35" width="290" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="2_2" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;FabricaColombiana&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getLinea(): LineaCocina&lt;br&gt;+ crearEntrada(): Entrada&lt;br&gt;+ crearPlatoFuerte(): PlatoFuerte&lt;br&gt;+ crearBebida(): Bebida&lt;br&gt;+ crearPostre(): Postre" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="100" y="325" width="290" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="2_3" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;FabricaItaliana&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getLinea(): LineaCocina&lt;br&gt;+ crearEntrada(): Entrada&lt;br&gt;+ crearPlatoFuerte(): PlatoFuerte&lt;br&gt;+ crearBebida(): Bebida&lt;br&gt;+ crearPostre(): Postre" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="540" y="325" width="290" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="2_4" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Menu&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- linea: LineaCocina&lt;br&gt;- platos: List&amp;lt;Plato&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getLinea(): LineaCocina&lt;br&gt;+ getPlatos(): List&amp;lt;Plato&amp;gt;&lt;br&gt;+ buscarPorNombre(nombre): Optional&amp;lt;Plato&amp;gt;&lt;br&gt;+ disponibles(): List&amp;lt;Plato&amp;gt;&lt;br&gt;+ ordenadoNatural(): List&amp;lt;Plato&amp;gt;&lt;br&gt;+ ordenadoPor(criterio): List&amp;lt;Plato&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="900" y="40" width="290" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="2_5" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;«interface»&lt;br&gt;Comando&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="40" width="290" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="2_6" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ComandoSobrePlato&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- pedido: Pedido&lt;br&gt;- plato: Plato&lt;br&gt;- cantidadAnterior: int&lt;hr style=&quot;margin:4px 0&quot;&gt;# calcularNuevaCantidad(cantidadActual): int&lt;br&gt;# getPlato(): Plato&lt;br&gt;+ ejecutar(): void&lt;br&gt;+ deshacer(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="315" width="290" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="2_7" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;AgregarPlatoComando&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- cantidad: int&lt;hr style=&quot;margin:4px 0&quot;&gt;# calcularNuevaCantidad(cantidadActual): int&lt;br&gt;+ descripcion(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="920" y="610" width="290" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="2_8" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;QuitarPlatoComando&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;# calcularNuevaCantidad(cantidadActual): int&lt;br&gt;+ descripcion(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="610" width="290" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="2_9" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;CambiarCantidadComando&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- nuevaCantidad: int&lt;hr style=&quot;margin:4px 0&quot;&gt;# calcularNuevaCantidad(cantidadActual): int&lt;br&gt;+ descripcion(): String" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="610" width="290" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="2_10" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;GestorComandos&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- historial: Deque&amp;lt;Comando&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ ejecutar(comando): void&lt;br&gt;+ deshacerUltimo(): boolean&lt;br&gt;+ tamanioHistorial(): int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1730" y="40" width="290" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_2" target="2_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_3" target="2_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" edge="1" parent="1" source="2_4" target="2_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_6" target="2_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_7" target="2_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_8" target="2_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=15;strokeWidth=1.5;" edge="1" parent="1" source="2_9" target="2_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" edge="1" parent="1" source="2_10" target="2_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-3" name="Servicios y estructuras">
+    <mxGraphModel dx="1382" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2300" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Main&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- LOG: Logger&lt;br&gt;- entrada: Scanner&lt;br&gt;- menus: Map&amp;lt;LineaCocina, Menu&amp;gt;&lt;br&gt;- pedidos: ServicioPedidos&lt;br&gt;- cocina: ServicioCocina&lt;hr style=&quot;margin:4px 0&quot;&gt;+ main(args): void" vertex="1">
+          <mxGeometry height="204" width="290" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ServicioPedidos&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ MINIMO_DOMICILIO: double&lt;br&gt;- LOG: Logger&lt;br&gt;- repositorio: Repositorio&amp;lt;Pedido, Integer&amp;gt;&lt;br&gt;- consecutivo: AtomicInteger&lt;br&gt;- cocina: ServicioCocina&lt;hr style=&quot;margin:4px 0&quot;&gt;+ crearPedidoMesa(mesa): PedidoMesa&lt;br&gt;+ crearPedidoDomicilio(zona, direccion): PedidoDomicilio&lt;br&gt;+ confirmar(pedido): void&lt;br&gt;+ entregar(pedido): void&lt;br&gt;+ buscarPedido(id): Optional&amp;lt;Pedido&amp;gt;&lt;br&gt;+ listar(): List&amp;lt;Pedido&amp;gt;" vertex="1">
+          <mxGeometry height="299" width="290" x="420" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="3_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ServicioCocina&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- LOG: Logger&lt;br&gt;- cola: ColaDeEspera&amp;lt;Pedido&amp;gt;&lt;br&gt;- reloj: Supplier&amp;lt;LocalDateTime&amp;gt;&lt;br&gt;- alTerminar: Consumer&amp;lt;Pedido&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ recibir(pedido): void&lt;br&gt;+ prepararSiguiente(): Optional&amp;lt;Pedido&amp;gt;&lt;br&gt;+ marcarListo(pedido): void&lt;br&gt;+ pendientes(): int" vertex="1">
+          <mxGeometry height="242" width="290" x="1350" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="3_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ServicioDomicilios&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- LOG: Logger&lt;br&gt;- repartidores: List&amp;lt;Repartidor&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ asignarRepartidor(pedido): Repartidor&lt;br&gt;+ liberar(pedido): void&lt;br&gt;+ disponibles(): long" vertex="1">
+          <mxGeometry height="185" width="290" x="1970" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="3_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ServicioReportes&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- LOG: Logger&lt;br&gt;- fuente: Supplier&amp;lt;List&amp;lt;Pedido&amp;gt;&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ ventasPorLinea(): Map&amp;lt;LineaCocina, Double&amp;gt;&lt;br&gt;+ platosMasPedidos(limite): List&amp;lt;Par&amp;lt;String, Integer&amp;gt;&amp;gt;&lt;br&gt;+ tiempoPromedioMinutos(): Optional&amp;lt;Double&amp;gt;&lt;br&gt;+ ingresosTotales(): double" vertex="1">
+          <mxGeometry height="204" width="290" x="1660" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3_6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;ColaDeEspera&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- elementos: Deque&amp;lt;T&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ encolar(elemento): void&lt;br&gt;+ desencolar(): Optional&amp;lt;T&amp;gt;&lt;br&gt;+ verSiguiente(): Optional&amp;lt;T&amp;gt;&lt;br&gt;+ tamanio(): int&lt;br&gt;+ estaVacia(): boolean" vertex="1">
+          <mxGeometry height="204" width="290" x="820" y="731" as="geometry" />
+        </mxCell>
+        <mxCell id="3_7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;RepositorioEnMemoria&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- almacen: Map&amp;lt;ID, T&amp;gt;&lt;br&gt;- extractorId: Function&amp;lt;T, ID&amp;gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ guardar(entidad): void&lt;br&gt;+ buscarPorId(id): Optional&amp;lt;T&amp;gt;&lt;br&gt;+ listar(): List&amp;lt;T&amp;gt;&lt;br&gt;+ eliminar(id): boolean" vertex="1">
+          <mxGeometry height="204" width="290" x="470" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="3_8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;«interface»&lt;br&gt;Repositorio&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;" vertex="1">
+          <mxGeometry height="128" width="290" x="100" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="3_9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Par&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;- primero: A&lt;br&gt;- segundo: B&lt;hr style=&quot;margin:4px 0&quot;&gt;+ getPrimero(): A&lt;br&gt;+ getSegundo(): B&lt;br&gt;+ equals(otro): boolean&lt;br&gt;+ hashCode(): int&lt;br&gt;+ toString(): String" vertex="1">
+          <mxGeometry height="223" width="290" x="1710" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="3_10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=9;fillColor=#ffffff;strokeColor=#444444;fontColor=#222222;fontSize=13;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;b&gt;Ordenamiento&lt;/b&gt;&lt;/div&gt;&lt;hr style=&quot;margin:4px 0&quot;&gt;&amp;nbsp;&lt;hr style=&quot;margin:4px 0&quot;&gt;+ ordenar(lista): &amp;lt;T extends Comparable&amp;lt;? super T&amp;gt;&amp;gt; void" vertex="1">
+          <mxGeometry height="128" width="290" x="1300" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_0" edge="1" parent="1" source="3_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_1" edge="1" parent="1" source="3_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_2" edge="1" parent="1" source="3_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_3" edge="1" parent="1" source="3_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_4" edge="1" parent="1" source="3_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_5" edge="1" parent="1" source="3_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_6" edge="1" parent="1" source="3_7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;endSize=15;strokeWidth=1.5;" target="3_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_7" edge="1" parent="1" source="3_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeWidth=1.4;" target="3_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
